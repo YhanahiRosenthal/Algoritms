@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/astrona.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/astrona.png">
+    <link rel="mask-icon" href="/favicon/astrona.png" color="#5bbad5">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+            extend: {
+              animation: {
+                move: 'moving 3s ease-in-out infinite'
+              },
+              keyframes: {
+                'moving' : {
+                  '0%' : {
+                    transform: 'translateY(0%) rotate(1deg)'
+                  },
+                  '50%' : {
+                    transform: 'translateY(3%) rotate(-1deg)'
+                  },
+                  '100%' : {
+                    transform: 'translateY(0%) rotate(1deg)'
+                  }
+                }
+              },
+              backgroundColor: (theme) => ({
+              ...theme('colors'),
+              primary: '#3490dc',
+              secondary: '#ffed4a',
+              danger: '#e3342f',
+              black: '#121212',
+              gray: '#301250d7',
+            })
+          },
+        }
+      }
+    </script>
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta name='author' content="Yhanahi Rosenthal">
+    <meta name='keyword' content="Full Stack Developer">
+    <meta
+      name="description"
+      content="Yhanahi Rosenthal Full-Stack Developer"
+    />
+
+    <title>Yhanahi Rosenthal</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="module" src="../src/main.tsx"></script>
+  </body>
+</html>
